@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                             // Cíl kompilace, ES6 zajišťuje moderní JavaScript
+    "module": "commonjs",                           // Použití CommonJS modulů (vhodné pro Node.js)
+    "sourceMap": true,                              // Vytváří sourcemapy, které pomáhají při ladění tím, že umožňují mapování JS zpět na původní TS
+
+    "strict": true,                                 // Zapíná přísný režim TypeScriptu
+    "strictNullChecks": false,                      // Vypíná kontrolu null hodnot
+    "noImplicitAny": true,                          // Zakazuje použití typu "any"
+    "noImplicitThis": true,                         // Zakazuje použití "this" přiřazení bez určeného typu v metodách tříd a funkcích.
+    "noUnusedLocals": true,                         // Varování o nepoužitých lokálních proměnných.
+    "noUnusedParameters": true,                     // Varování o nepoužitých parametrech ve funkcích.
+    "noImplicitReturns": true,                      // Varování, když funkce nevrací hodnotu ve všech cestách.
+    "noFallthroughCasesInSwitch": true,             // Zakazuje "fallthrough" v switch-case blocích, kde se případy přepínají bez přerušení.
+
+    "esModuleInterop": true,                        // Zajišťuje kompatiblitu mezi CommonJS a ES moduly
+    "allowSyntheticDefaultImports": true,           // Zajišťuje kompatiblitu mezi CommonJS a ES moduly
+    "skipLibCheck": true,                           // Přeskakuje kontrolu typů ve vnějších knihovnách (zrychluje kompilaci)
+    "forceConsistentCasingInFileNames": true,       // Zajišťuje, že jména souborů jsou konzistentní
+
+    "outDir": "dist",                               // Cesta, kam budou zkompilované JS soubory uloženy (pokud budete kompilovat)
+    "rootDirs": ["tests", "src"]                    // Cesta k testům (TypeScript kód)
+  },
+  "include": ["tests/**/*.ts"],                     // Zahrnuje všechny TypeScript soubory v testovacím adresáři
+  "exclude": ["node_modules"]                       // Vylučuje složku node_modules
+}

@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "Petr Veselý"
+  },
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "pretest": "tsc --noEmit",
+    "gui": "npx playwright test tests/test.spec.ts --ui",
+    "start": "npx playwright test tests/test.spec.ts --reporter=html",
+    "start-h": "npx playwright test tests/test.spec.ts --reporter=html --headed"
+  }
+}
